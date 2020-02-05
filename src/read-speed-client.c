@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
 
     double lastPrintTime;
     struct timespec tNow;
-    clock_gettime(CLOCK_MONOTONIC, &tNow);
+    clock_gettime(CLOCK_BOOTTIME, &tNow);
     lastPrintTime = (double)tNow.tv_sec + (double)tNow.tv_nsec / 1000000000.0;
 
     int counter = 0;
