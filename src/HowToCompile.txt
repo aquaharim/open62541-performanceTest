@@ -1,0 +1,20 @@
+컴파일 명령어
+in MinGW-w64
+
+Server
+gcc -std=c99 -o server src/tutorial-performanceTest-server.c -Iinclude -Llib -static -lopen62541 -lws2_32
+
+Client
+gcc -std=c99 -o client src/tutorial-performanceTest-client.c -Iinclude -Llib -static -lopen62541 -lws2_32
+
+
+
+실행 명령어
+cmd or powershell
+
+Server
+server.exe
+
+Client
+client.exe opc.tcp://<Server_IP_Address>:4840
+ex) client.exe opc.tcp://192.168.1.100:4840
